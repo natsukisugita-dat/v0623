@@ -36,24 +36,25 @@ namespace v0623
             label1.Top += vy;
 
             score -= 1;
-            label2.Text = $"score {score}";
-            //label2.Text = ("score "+ score);
+            //label2.Text = $"score {score}";
+            label2.Text = ("score "+ score); //これでもできる
 
             if (label1.Left < 0)
             {
-                vx = 10;
+                vx = Math.Abs(vx) * 110 / 100;// * 110 / 10は10%
+                
             }
             if (label1.Right > ClientSize.Width)
             {
-                vx = -10;
+                vx = -Math.Abs(vx) * 110 / 100;
             }
             if (label1.Top < 0)
             {
-                vy = 10;
+                vy = Math.Abs(vy) * 110 / 100;
             }
             if (label1.Bottom > ClientSize.Height)
             {
-                vy = -10;
+                vy = -Math.Abs(vy) * 110 / 100;
             }
         }
 
