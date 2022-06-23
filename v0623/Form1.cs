@@ -14,6 +14,7 @@ namespace v0623
     {
         int vx = -10;
         int vy = -10;
+        int score = 100;
 
 
         public Form1()
@@ -33,6 +34,9 @@ namespace v0623
 
             label1.Left += vx;
             label1.Top += vy;
+            score -= 1;
+            label2.Text = score.ToString();
+            
 
             if (label1.Left < 0)
             {
@@ -50,6 +54,11 @@ namespace v0623
             {
                 vy = -10;
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
