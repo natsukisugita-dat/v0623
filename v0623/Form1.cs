@@ -37,6 +37,7 @@ namespace v0623
 
             score -= 1;
             label2.Text = $"score {score}";
+            //label2.Text = ("score "+ score);
 
             if (label1.Left < 0)
             {
