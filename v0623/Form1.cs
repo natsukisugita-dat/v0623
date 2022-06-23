@@ -34,9 +34,9 @@ namespace v0623
 
             label1.Left += vx;
             label1.Top += vy;
+
             score -= 1;
-            label2.Text = score.ToString();
-            
+            label2.Text = $"score {score}";
 
             if (label1.Left < 0)
             {
